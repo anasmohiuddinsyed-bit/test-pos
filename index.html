@@ -1,48 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>POSENTIA — AI Transaction Auditor</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>body{background:#060b13;}</style>
-</head>
-<body class="text-slate-100">
-<header class="border-b border-white/10 bg-[#060b13]/80 backdrop-blur sticky top-0">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="font-bold text-lg">Cognivators</h1>
-    <a href="#waitlist" class="bg-sky-400 text-slate-950 px-4 py-2 rounded-lg font-semibold hover:bg-sky-300">Join Waitlist</a>
-  </div>
-</header>
-<section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center">
-  <div>
-    <h2 class="text-4xl font-bold mb-4">Meet POSENTIA — The Sentient POS Auditor</h2>
-    <p class="text-slate-300 mb-6">POSENTIA reads your transactions, finds hidden fees, and explains them like a human auditor. Join our private beta to get early access.</p>
-    <a href="#waitlist" class="bg-sky-400 text-slate-950 px-5 py-3 rounded-xl font-semibold hover:bg-sky-300">Join the Waitlist</a>
-    <div class="border border-sky-400/20 rounded-2xl p-4 bg-slate-900 text-center">
-      <p class="text-sm mb-2">POSENTIA Live Avatar</p>
-<div class="aspect-video bg-black/70 rounded-lg overflow-hidden">
-  <img 
-    src="avatar.png" 
-    alt="POSENTIA Avatar" 
-    class="rounded-lg w-full h-full object-cover object-top" 
-  />
-</div>
-</div>
-</section>
-<section id="waitlist" class="bg-slate-950/30 border-t border-white/10 py-16">
-  <div class="max-w-3xl mx-auto text-center px-4">
-    <h3 class="text-3xl font-semibold mb-3">Join the Private Beta</h3>
-    <p class="text-slate-400 mb-6">Get early access and lifetime discounts as a founding user.</p>
-    <form class="flex flex-col md:flex-row gap-3 justify-center" onsubmit="event.preventDefault()">
-      <input type="email" required placeholder="you@company.com" class="rounded-lg bg-white/10 border border-white/10 px-4 py-3 text-sm focus:border-sky-400 outline-none w-full md:w-64">
-      <button type="submit" class="bg-sky-400 text-slate-950 font-semibold px-6 py-3 rounded-lg hover:bg-sky-300">Join Waitlist</button>
-    </form>
-    <p class="text-xs text-slate-500 mt-3">No spam — just early access.</p>
-  </div>
-</section>
-<footer class="border-t border-white/10 text-center py-6 text-xs text-slate-500">
-  © 2025 Cognivators — The Intelligence Infrastructure Company
-</footer>
-</body>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <title>POSENTIA — AI Transaction Auditor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { background: #060b13; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[#060b13] text-slate-100">
+    <!-- nav -->
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-[#060b13]/70 backdrop-blur">
+      <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <div class="h-8 w-8 rounded-lg bg-sky-500/10 border border-sky-400/40 grid place-items-center text-xs font-bold tracking-tight">
+            C
+          </div>
+          <div>
+            <p class="text-sm font-semibold leading-none">Cognivators</p>
+            <p class="text-[10px] text-slate-400">The Intelligence Infrastructure Company</p>
+          </div>
+        </a>
+        <div class="flex items-center gap-2">
+          <a href="#waitlist" class="inline-flex text-xs px-3 py-2 rounded-lg bg-sky-400 text-slate-950 font-semibold hover:bg-sky-300">
+            Join the waitlist
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero -->
+    <section class="relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.22),_transparent_50%)]"></div>
+      <div class="mx-auto max-w-6xl px-4 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center relative z-10">
+        <div>
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Introducing POSENTIA</p>
+          <h1 class="mt-3 text-4xl md:text-5xl font-semibold leading-tight">
+            The sentient POS auditor that shows you where the money is leaking.
+          </h1>
+          <p class="mt-5 text-slate-300 text-base md:text-lg">
+            POSENTIA reads your transactions, finds hidden fees, and explains them like a teammate.
+            Join the private beta to get it first.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#waitlist" class="rounded-xl px-5 py-3 bg-sky-400 text-slate-950 font-semibold hover:bg-sky-300 transition">
+              Join the waitlist
+            </a>
+            <a href="#how" class="rounded-xl px-5 py-3 bg-white/5 hover:bg-white/10 transition text-sm">
+              See how it works
+            </a>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">
+            Limited founding slots • early adopter pricing • SOC-readiness docs on request
+          </p>
+        </div>
+
+        <!-- avatar placeholder -->
+        <div class="relative">
+          <div class="relative rounded-2xl border border-sky-400/10 bg-gradient-to-b from-slate-950/60 to-slate-900/10 p-4 shadow-[0_0_120px_rgba(56,189,248,0.16)]">
+            <div class="rounded-xl bg-[#05070b] aspect-[4/3] w-full overflow-hidden flex items-center justify-center">
+              <div class="text-center px-4 py-6">
+                <div class="mx-auto mb-4 h-16 w-16 rounded-full bg-sky-500/20 border border-sky-400/30 grid place-items-center">
+                  <svg class="h-8 w-8 text-sky-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 10h10" />
+                    <path d="M7 14h6" />
+                    <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+                  </svg>
+                </div>
+                <p class="text-sm font-semibold">POSENTIA Live Avatar</p>
+                <p class="mt-2 text-xs text-slate-400">Drop your 3D / video avatar iframe here.</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -right-4 rounded-xl bg-sky-400/10 border border-sky-400/20 px-4 py-3 text-xs text-slate-100 backdrop-blur">
+            <p class="text-[10px] uppercase tracking-wide text-slate-400">Sample insight</p>
+            <p class="text-xs">“Location #3 is overpaying 0.8% on debit — recommend dispute.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- trust bar -->
+    <section class="border-t border-white/5">
+      <div class="mx-auto max-w-6xl px-4 py-6 flex flex-wrap items-center gap-6 text-xs text-slate-500">
+        <span class="text-slate-300/80">Plugs into:</span>
+        <span>Stripe</span>
+        <span>Square</span>
+        <span>Shopify POS</span>
+        <span>QuickBooks</span>
+        <span>Azure / AWS</span>
+      </div>
+    </section>
+
+    <!-- how it works -->
+    <section id="how" class="border-t border-white/5">
+      <div class="mx-auto max-w-6xl px-4 py-16">
+        <h2 class="text-2xl md:text-3xl font-semibold">How POSENTIA works</h2>
+        <p class="mt-2 text-slate-300 max-w-2xl">
+          Three steps. No engineers needed. Built for CFOs, operators, and founders who want answers — not dashboards.
+        </p>
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <div class="rounded-2xl bg-white/5 border border-white/5 p-5">
+            <p class="text-xs text-slate-400">01</p>
+            <h3 class="mt-2 text-lg font-semibold">Connect or upload</h3>
+            <p class="mt-2 text-sm text-slate-300">
+              Securely connect POS/payments or upload CSVs from your processor.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/5 p-5">
+            <p class="text-xs text-slate-400">02</p>
+            <h3 class="mt-2 text-lg font-semibold">AI audit in seconds</h3>
+            <p class="mt-2 text-sm text-slate-300">
+              Models scan fees, duplicates, and settlement drift with citations.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/5 p-5">
+            <p class="text-xs text-slate-400">03</p>
+            <h3 class="mt-2 text-lg font-semibold">Explains & fixes</h3>
+            <p class="mt-2 text-sm text-slate-300">
+              POSENTIA tells you what to dispute, what to fix, and how much you’re losing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- waitlist -->
+    <section id="waitlist" class="border-t border-white/5 bg-slate-950/20">
+      <div class="mx-auto max-w-3xl px-4 py-16 text-center">
+        <h2 class="text-3xl font-semibold">Join the private beta waitlist</h2>
+        <p class="mt-3 text-slate-300">
+          Get early access, founder-level onboarding, and locked-in pricing. We’ll invite in waves.
+        </p>
+        <form class="mt-8 flex flex-col md:flex-row gap-3 justify-center" onsubmit="event.preventDefault()">
+          <input
+            required
+            type="email"
+            placeholder="you@company.com"
+            class="w-full md:w-72 rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-sky-400"
+          />
+          <input
+            type="text"
+            placeholder="Company / brand"
+            class="w-full md:w-52 rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-sm outline-none focus:border-sky-400"
+          />
+          <button
+            type="submit"
+            class="rounded-xl px-5 py-3 bg-sky-400 text-slate-950 font-semibold hover:bg-sky-300 transition text-sm"
+          >
+            Join waitlist
+          </button>
+        </form>
+        <p class="mt-3 text-xs text-slate-500">
+          We won’t spam. We’ll send product updates and beta slots only.
+        </p>
+
+        <div class="mt-10 grid md:grid-cols-3 gap-4 text-left">
+          <div class="rounded-2xl bg-white/3 border border-white/5 p-4">
+            <h4 class="text-sm font-semibold text-slate-100">Founder channel</h4>
+            <p class="mt-1 text-xs text-slate-300">Talk directly with Cognivators while we tune POSENTIA.</p>
+          </div>
+          <div class="rounded-2xl bg-white/3 border border-white/5 p-4">
+            <h4 class="text-sm font-semibold text-slate-100">Early pricing</h4>
+            <p class="mt-1 text-xs text-slate-300">Lock in lower SMB / chain pricing before public launch.</p>
+          </div>
+          <div class="rounded-2xl bg-white/3 border border-white/5 p-4">
+            <h4 class="text-sm font-semibold text-slate-100">Launch feature</h4>
+            <p class="mt-1 text-xs text-slate-300">Get featured as an early adopter (optional).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="border-t border-white/5">
+      <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2025 Cognivators — POSENTIA</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-slate-200">Privacy</a>
+          <a href="#" class="hover:text-slate-200">Security</a>
+          <a href="mailto:hello@cognivators.com" class="hover:text-slate-200">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
